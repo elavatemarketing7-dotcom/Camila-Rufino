@@ -281,7 +281,7 @@ const MainSite = () => {
           </p>
           <div className="bg-stone-50 p-8 rounded-3xl border-l-4 border-gold shadow-sm">
             <p className="text-lg md:text-xl text-stone-600 leading-relaxed font-medium italic">
-              "Resultados naturais e transformadores. Aperte o play e sinta a diferença de ser cuidada por quem entende que sua beleza é única, e merece atenção especial."
+              "Resultados naturais e transformadores. Aperte o play e sinta a diferença de ser cuidada por quem entende que sua beleza é única, e merece attention especial."
             </p>
           </div>
           <div className="mt-10">
@@ -454,7 +454,7 @@ const MainSite = () => {
         </div>
       </section>
 
-      {/* Testimonials - REFACTORED TO BE MORE APPARENT AND ORGANIZED */}
+      {/* Testimonials - ADJUSTED FOR MAXIMUM MOBILE VISIBILITY */}
       <section className="py-24 px-6 bg-[#FAF8F6] border-y border-stone-100 overflow-hidden">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -465,41 +465,45 @@ const MainSite = () => {
             </div>
             <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-4">Vozes de Transformação</h2>
             <p className="text-gold uppercase tracking-[4px] text-[10px] md:text-sm font-black mb-2">O QUE ELAS DIZEM</p>
-            <p className="text-stone-500 max-w-xl mx-auto text-sm md:text-base">Confira os depoimentos reais de quem confiou sua beleza e autoestima ao nosso método exclusivo.</p>
+            <p className="text-stone-500 max-w-xl mx-auto text-sm md:text-base px-2">Confira os depoimentos reais legíveis de quem já transformou sua autoestima.</p>
           </div>
           
-          <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+          {/* Changed columns-2 to columns-1 on mobile for legibility */}
+          <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
             {TESTIMONIALS.map((url, i) => (
               <div 
                 key={i} 
-                className="break-inside-avoid bg-white rounded-2xl overflow-hidden shadow-xl shadow-stone-200/50 border border-stone-100 hover:scale-[1.03] transition-all duration-500 group cursor-pointer"
+                className="break-inside-avoid bg-white rounded-[25px] overflow-hidden shadow-2xl shadow-stone-200/40 border border-stone-100 hover:scale-[1.02] transition-all duration-500 group cursor-pointer mb-6"
                 onClick={() => setSelectedImg(url)}
               >
                 <img 
                   src={url} 
-                  className="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity" 
+                  className="w-full h-auto object-cover opacity-95 group-hover:opacity-100 transition-opacity" 
                   alt={`Depoimento ${i + 1}`} 
                   loading="lazy"
                 />
-                <div className="p-4 bg-white border-t border-stone-50 flex justify-between items-center">
-                  <div className="flex gap-1">
+                <div className="p-5 bg-white border-t border-stone-50 flex justify-between items-center">
+                  <div className="flex gap-1.5">
                     {[...Array(5)].map((_, star) => (
-                      <i key={star} className="fas fa-star text-[8px] text-gold"></i>
+                      <i key={star} className="fas fa-star text-[10px] text-gold"></i>
                     ))}
                   </div>
-                  <span className="text-[9px] text-stone-400 font-bold uppercase tracking-widest italic">Verificada</span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] text-stone-400 font-bold uppercase tracking-widest italic">Paciente Real</span>
+                    <i className="fas fa-check-circle text-gold text-xs"></i>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
           
-          <div className="mt-16 text-center">
+          <div className="mt-20 text-center">
             <button 
               onClick={() => window.open(WHATSAPP_URL, '_blank')}
-              className="px-10 py-5 bg-stone-900 text-white font-bold rounded-2xl shadow-xl hover:bg-gold transition-colors active:scale-95 flex items-center gap-3 mx-auto"
+              className="w-full md:w-auto px-12 py-6 bg-stone-900 text-white font-bold rounded-2xl shadow-2xl hover:bg-gold transition-all active:scale-95 flex items-center justify-center gap-4 mx-auto text-lg"
             >
-              <i className="fab fa-whatsapp text-lg"></i>
-              QUERO VIVER ESSA EXPERIÊNCIA
+              <i className="fab fa-whatsapp text-2xl"></i>
+              QUERO MINHA TRANSFORMAÇÃO
             </button>
           </div>
         </div>
