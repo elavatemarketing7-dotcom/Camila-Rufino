@@ -513,7 +513,7 @@ const MainSite = () => {
       <section id="contato" className="py-24 px-6 text-center bg-[#FDFBF9]">
         <div className="max-w-3xl mx-auto bg-white p-12 rounded-[50px] border border-stone-100 shadow-2xl">
           <h2 className="text-4xl md:text-5xl font-serif text-stone-900 mb-6">Pronta para se redescobrir?</h2>
-          <p className="text-xl text-stone-500 mb-12">Restam poucas vagas para este mês. Agende sua primeira consulta agora.</p>
+          <p className="text-xl text-stone-500 mb-12">Restam poucas vagas para este mês.  Chame agora e Agende sua primeira consulta agora.</p>
           <button 
             onClick={() => window.open(WHATSAPP_URL, '_blank')}
             className="w-full md:w-auto px-16 py-8 bg-gold text-white text-2xl font-black rounded-full shadow-2xl active:scale-95 transition-all btn-pulse uppercase tracking-wider"
